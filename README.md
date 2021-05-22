@@ -1,7 +1,7 @@
 # GSQL Client
 GSQL client here is to access TigerGraph **programmatically**. If you simply want to access TigerGraph remotely, please refer to [Using a Remote GSQL Client](https://docs.tigergraph.com/dev/using-a-remote-gsql-client) for more information.
 
-Please check out [Packages](https://github.com/tigergraph/gsql_client/packages) to look up the dependency you want.
+Please check out the [Package](https://github.com/tigergraph/gsql_client/packages/805501) to look up the dependency you want.
 
 ## Authentication
 GitHub Packages require authentication to access a package. To authenticate, you will need a personal access token (PAT) with `read:packages` scope.
