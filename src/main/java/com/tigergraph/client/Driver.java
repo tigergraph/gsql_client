@@ -19,6 +19,71 @@ public class Driver {
                 System.out.println( "You may use 'GSQL_CLIENT_VERSION=v? java ...' or \n    'java -DGSQL_CLIENT_VERSION=v? ...' to specify the version");
             }
             if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_4_0 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_4_0") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_4_0")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_4_0");
+                    com.tigergraph.v3_4_0.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_3_0_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_3_0_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_3_0_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_3_0_1");
+                    com.tigergraph.v3_3_0_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_2_2_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_2_2_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_2_2_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_2_2_1");
+                    com.tigergraph.v3_2_2_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_2_1_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_2_1_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_2_1_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_2_1_1");
+                    com.tigergraph.v3_2_1_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_2_0_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_2_0_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_2_0_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_2_0_1");
+                    com.tigergraph.v3_2_0_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
                 Supported_Versions = Supported_Versions + "v3_2_0 ";
             }
             if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_2_0") ) ||
@@ -32,6 +97,32 @@ public class Driver {
                 }
             }
             if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_1_6_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_1_6_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_1_6_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_1_6_1");
+                    com.tigergraph.v3_1_6_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_1_5_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_1_5_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_1_5_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_1_5_1");
+                    com.tigergraph.v3_1_5_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
                 Supported_Versions = Supported_Versions + "v3_1_2 ";
             }
             if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_1_2") ) ||
@@ -40,6 +131,19 @@ public class Driver {
                     System.out.println("========================");
                     System.out.println("Trying version: v3_1_2");
                     com.tigergraph.v3_1_2.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_1_1_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_1_1_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_1_1_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_1_1_1");
+                    com.tigergraph.v3_1_1_1.client.Driver.main(args);
                 } catch (SecurityException e) {
                     ;
                 }
@@ -71,6 +175,32 @@ public class Driver {
                 }
             }
             if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_0_6_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_0_6_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_0_6_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_0_6_1");
+                    com.tigergraph.v3_0_6_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v3_0_5_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_0_5_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v3_0_5_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v3_0_5_1");
+                    com.tigergraph.v3_0_5_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
                 Supported_Versions = Supported_Versions + "v3_0_5 ";
             }
             if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v3_0_5") ) ||
@@ -97,6 +227,19 @@ public class Driver {
                 }
             }
             if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v2_6_6_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v2_6_6_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v2_6_6_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v2_6_6_1");
+                    com.tigergraph.v2_6_6_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
                 Supported_Versions = Supported_Versions + "v2_6_2 ";
             }
             if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v2_6_2") ) ||
@@ -118,6 +261,32 @@ public class Driver {
                     System.out.println("========================");
                     System.out.println("Trying version: v2_6_0");
                     com.tigergraph.v2_6_0.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v2_5_4_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v2_5_4_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v2_5_4_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v2_5_4_1");
+                    com.tigergraph.v2_5_4_1.client.Driver.main(args);
+                } catch (SecurityException e) {
+                    ;
+                }
+            }
+            if ( i==1 ) {
+                Supported_Versions = Supported_Versions + "v2_5_2_1 ";
+            }
+            if ( ( i==1 && Gsql_Client_Version.equalsIgnoreCase("v2_5_2_1") ) ||
+                 ( i==2 && (!Gsql_Client_Version.equalsIgnoreCase("v2_5_2_1")) )){
+                try {
+                    System.out.println("========================");
+                    System.out.println("Trying version: v2_5_2_1");
+                    com.tigergraph.v2_5_2_1.client.Driver.main(args);
                 } catch (SecurityException e) {
                     ;
                 }
