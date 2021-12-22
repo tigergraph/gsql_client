@@ -77,12 +77,16 @@ or set environment variables `USERNAME` and `TOKEN` as your GitHub username and 
 For more information, please refer to [Working with the Gradle registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry#authenticating-to-github-packages).
 
 ## Older Releases
+
+> :warning: Due to the critical security vulnerabilities discovered in Log4j, we highly recommend you to use the latest version of this library which is packed with the latest version of `log4j-core`.
+
 Please visit [Maven Repository](https://mvnrepository.com/artifact/com.tigergraph.client/gsql_client) for older releases.
 
 ## Version Compatibility
 | GSQL Client | Server |
 | :---------- | :--------- |
-| `3.2.0`     | `<= 3.2.0` |
+| `3.4.0`     | `<= 3.4.0` |
+| `3.2.0`     | `<= 3.2.2` |
 | `3.1.2`     | `<= 3.1.x` |
 | `3.1.0`     | `<= 3.1.0` |
 | `3.0.5`     | `<= 3.0.6` |

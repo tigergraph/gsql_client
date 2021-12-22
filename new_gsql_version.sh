@@ -52,18 +52,24 @@ PKG_CLIENT=com/tigergraph/client
 PKG_COMMON=com/tigergraph/common
 if [ -d gsql-client ]; then
   # for 3.x
-  SRC_CLIENT=gsql-client/src/main/java/$PKG_CLIENT
-  SRC_COMMON=gsql-common/src/main/java/$PKG_COMMON
+  ROOT_CLIENT=gsql-client
+  SRC_CLIENT=$ROOT_CLIENT/src/main/java/$PKG_CLIENT
+  ROOT_COMMON=gsql-common
+  SRC_COMMON=$ROOT_COMMON/src/main/java/$PKG_COMMON
 elif [ -d src/main/java ]; then
   # for 2.5.x and newer
-  SRC_CLIENT=src/main/java/$PKG_CLIENT
-  SRC_COMMON=src/main/java/$PKG_COMMON
+  ROOT_CLIENT=src/main/java/$PKG_CLIENT
+  SRC_CLIENT=$ROOT_CLIENT
+  ROOT_COMMON=src/main/java/$PKG_COMMON
+  SRC_COMMON=$ROOT_COMMON
 else
   # for older versions
-  SRC_CLIENT=$PKG_CLIENT
-  SRC_COMMON=$PKG_COMMON
+  ROOT_CLIENT=$PKG_CLIENT
+  SRC_CLIENT=$ROOT_CLIENT
+  ROOT_COMMON=$PKG_COMMON
+  SRC_COMMON=$ROOT_COMMON
 fi
-client_commit="\"$(git log -1 --pretty="format:%H" -- $SRC_CLIENT $SRC_COMMON)\""
+client_commit="\"$(git log -1 --pretty="format:%H" -- $ROOT_CLIENT $ROOT_COMMON)\""
 cd -
 
 #Step 3: Copy source code to target
