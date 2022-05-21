@@ -7,15 +7,17 @@
  * Proprietary and confidential
  * ****************************************************************************
  */
-package com.tigergraph.v3_3_0_1.client;
+package com.tigergraph.v3_2_3.client;
 
-import com.tigergraph.v3_3_0_1.client.util.*;
-import com.tigergraph.v3_3_0_1.client.util.SystemUtils.ExitStatus;
+import com.tigergraph.v3_2_3.client.util.*;
+import com.tigergraph.v3_2_3.client.util.SystemUtils.ExitStatus;
 import jline.console.ConsoleReader;
 import jline.console.completer.ArgumentCompleter;
 import jline.console.completer.FileNameCompleter;
 import jline.console.history.FileHistory;
 import jline.console.history.History;
+
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.*;
@@ -28,7 +30,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-import static com.tigergraph.v3_3_0_1.client.util.SystemUtils.logger;
+import static com.tigergraph.v3_2_3.client.util.SystemUtils.logger;
 
 public class Client {
   private static final String DEFAULT_USER = "tigergraph";
@@ -889,7 +891,7 @@ public class Client {
    * @return Serialized {@cod JSONObject}
    */
   private String generateCookies() {
-    if (userCookie != null) {
+    if (userCookie != null && isJSONValid(userCookie)) {
       // return the cookie got from last connection
       return userCookie;
     }
@@ -928,7 +930,22 @@ public class Client {
       cookieJSON.put("clientCommit", commitClient);
     }
 
+    if (userCookie != null) {
+      userCookie = userCookie + "; GSQLCookie=" + cookieJSON.toString();
+      logger.info("Generate new Cookie: %s", userCookie);
+      return userCookie;
+    }
+    logger.info("Generate new Cookie: %s", cookieJSON.toString());
     return cookieJSON.toString();
+  }
+
+  private boolean isJSONValid(String test) {
+    try {
+      new JSONObject(test);
+    } catch (JSONException ex) {
+      return false;
+    }
+    return true;
   }
 
   /**
@@ -937,7 +954,7 @@ public class Client {
    * @return Commit hash
    */
   private String getCommitClient() {
-  if (true) return "90cc0512851acca2be10044878815bc414876f23"; String clientCommitHash = null;
+  if (true) return "7907d2ede4adf55e0ba3c6e2c0123987c03e742f"; String clientCommitHash = null;
     try {
       Properties props = new Properties();
       InputStream in = Client.class.getClassLoader().getResourceAsStream("Version.prop");

@@ -41,11 +41,9 @@ EOT
 ########################################################################
 # 2. add each version. Make sure we can CD to the first GLE directory. #
 ########################################################################
-cd $GLE_DIR; git pull && git checkout tg_3.4.0_dev; cd -
+cd $GLE_DIR; git pull && git checkout tg_3.2.3_dev; cd -
 #                     client path branch/tag                      version_string is_tag?
-./new_gsql_version.sh $GLE_DIR	  tg_3.5.0_dev			              v3_5_0
-./new_gsql_version.sh $GLE_DIR	  tg_3.4.0_dev			              v3_4_0
-./new_gsql_version.sh $GLE_DIR	  log4j-rce/3.3.0                 v3_3_0_1
+./new_gsql_version.sh $GLE_DIR	  tg_3.2.3_dev			              v3_2_3
 ./new_gsql_version.sh $GLE_DIR	  log4j-rce/3.2.2                 v3_2_2_1
 ./new_gsql_version.sh $GLE_DIR	  log4j-rce/3.2.1                 v3_2_1_1
 ./new_gsql_version.sh $GLE_DIR	  log4j-rce/3.2.0                 v3_2_0_1

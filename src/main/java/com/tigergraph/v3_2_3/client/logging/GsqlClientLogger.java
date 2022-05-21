@@ -7,7 +7,7 @@
  * ****************************************************************************
  */
 
-package com.tigergraph.v3_3_0_1.client.logging;
+package com.tigergraph.v3_2_3.client.logging;
 
 import java.net.URI;
 

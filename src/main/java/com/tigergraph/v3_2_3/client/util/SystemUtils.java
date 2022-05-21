@@ -7,9 +7,9 @@
  * ****************************************************************************
  */
 
-package com.tigergraph.v3_4_0.client.util;
+package com.tigergraph.v3_2_3.client.util;
 
-import com.tigergraph.v3_4_0.client.logging.GsqlClientLogger;
+import com.tigergraph.v3_2_3.client.logging.GsqlClientLogger;
 
 import java.nio.file.Paths;
 

@@ -7,12 +7,12 @@
  * Proprietary and confidential
  * ****************************************************************************
  */
-package com.tigergraph.v3_4_0.client;
+package com.tigergraph.v3_2_3.client;
 
-import static com.tigergraph.v3_4_0.client.util.SystemUtils.ExitStatus;
+import static com.tigergraph.v3_2_3.client.util.SystemUtils.ExitStatus;
 
-import com.tigergraph.v3_4_0.client.util.RetryableHttpConnection;
-import com.tigergraph.v3_4_0.client.util.SystemUtils;
+import com.tigergraph.v3_2_3.client.util.RetryableHttpConnection;
+import com.tigergraph.v3_2_3.client.util.SystemUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
