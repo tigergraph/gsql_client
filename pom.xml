@@ -4,7 +4,7 @@
     <groupId>com.tigergraph.client</groupId>
     <name>gsql_client</name>
     <artifactId>gsql_client</artifactId>
-    <version>3.5.3</version>
+    <version>3.6.0</version>
     <url>http://maven.apache.org</url>
     <build>
         <plugins>
