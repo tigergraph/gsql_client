@@ -85,6 +85,7 @@ Please visit [Maven Repository](https://mvnrepository.com/artifact/com.tigergrap
 ## Version Compatibility
 | GSQL Client | Server |
 | :---------- | :--------- |
+| `3.7.0`     | `<= 3.7.*` |
 | `3.6.2`     | `<= 3.6.*` |
 | `3.6.0`     | `<= 3.6.1` |
 | `3.5.3`     | `<= 3.5.*` |
