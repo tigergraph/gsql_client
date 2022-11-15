@@ -43,6 +43,7 @@ EOT
 ########################################################################
 cd $GLE_DIR; git pull && git checkout tg_3.7.0_dev; cd -
 #                     client path branch/tag                      version_string is_tag?
+./new_gsql_version.sh $GLE_DIR	  tg_3.8.0_dev			              v3_8_0
 ./new_gsql_version.sh $GLE_DIR	  tg_3.7.0_dev			              v3_7_0
 ./new_gsql_version.sh $GLE_DIR	  tg_3.6.2_dev			              v3_6_2
 ./new_gsql_version.sh $GLE_DIR	  tg_3.6.0_dev			              v3_6_0
