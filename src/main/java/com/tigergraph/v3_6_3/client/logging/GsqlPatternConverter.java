@@ -7,9 +7,9 @@
  * ****************************************************************************
  */
 
-package com.tigergraph.v3_7_0.client.logging;
+package com.tigergraph.v3_6_3.client.logging;
 
-import com.tigergraph.v3_7_0.client.util.SystemUtils;
+import com.tigergraph.v3_6_3.client.util.SystemUtils;
 
 import org.apache.logging.log4j.core.LogEvent;
 import org.apache.logging.log4j.core.config.plugins.Plugin;
