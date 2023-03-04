@@ -7,9 +7,9 @@
  * Proprietary and confidential
  * ****************************************************************************
  */
-package com.tigergraph.v3_6_3.client;
+package com.tigergraph.v3_7_0.client;
 
-import com.tigergraph.v3_6_3.client.util.SystemUtils;
+import com.tigergraph.v3_7_0.client.util.SystemUtils;
 import org.apache.commons.cli.*;
 import java.io.File;
 
@@ -37,7 +37,7 @@ public class GsqlCli {
     options.addOption(
         Option.builder("p").longOpt("password").hasArg(true).build());
     options.addOption(
-                Option.builder("s").longOpt("secret").hasArg(true).build());
+        Option.builder("s").longOpt("secret").hasArg(true).build());
     options.addOption(
         Option.builder("f").longOpt("file").hasArg(true).build());
     // support login to a specified graph

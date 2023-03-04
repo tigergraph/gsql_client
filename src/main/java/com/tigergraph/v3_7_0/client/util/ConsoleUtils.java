@@ -1,4 +1,4 @@
-package com.tigergraph.v3_6_3.client.util;
+package com.tigergraph.v3_7_0.client.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -7,7 +7,7 @@
  * ****************************************************************************
  */
 
-package com.tigergraph.v3_6_3.client.logging;
+package com.tigergraph.v3_7_0.client.logging;
 
 import java.net.URI;
 
@@ -105,29 +105,4 @@ public final class GsqlClientLogger extends ExtendedLoggerWrapper {
     logger.logIfEnabled(FQCN, Level.ERROR, null, t.getMessage(), t);
   }
 
-  // hardcode all methods need to be masked
-  // For regex: (?i) means to ignore lower and upper case of character
-  // (?s) means to support multi-line matching
-  // $ means end of line
-  private static String[] maskMethods
-      = {
-          // "auth":"data_to_mask" -> "auth":<masked>
-          "(?s)(?i)(\"auth\"\\s*:).*?(,|$)"
-      };
-
-  /**
-   * Mask input command to hide potentially sensitive info, such as parameters and values
-   *
-   * @param command command need to be masked
-   * @return masked command
-   */
-  public static String maskArgsInCommand(String command) {
-    if (command == null) {
-      return null;
-    }
-    for (String method : maskMethods) {
-      command = command.replaceAll(method, "$1<masked>$2");
-    }
-    return command;
-  }
 }

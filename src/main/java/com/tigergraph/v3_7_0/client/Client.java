@@ -7,10 +7,10 @@
  * Proprietary and confidential
  * ****************************************************************************
  */
-package com.tigergraph.v3_6_3.client;
+package com.tigergraph.v3_7_0.client;
 
-import com.tigergraph.v3_6_3.client.util.*;
-import com.tigergraph.v3_6_3.client.util.SystemUtils.ExitStatus;
+import com.tigergraph.v3_7_0.client.util.*;
+import com.tigergraph.v3_7_0.client.util.SystemUtils.ExitStatus;
 import jline.console.ConsoleReader;
 import jline.console.completer.ArgumentCompleter;
 import jline.console.completer.FileNameCompleter;
@@ -32,8 +32,7 @@ import java.nio.file.Paths;
 import java.nio.file.attribute.PosixFilePermissions;
 import java.util.*;
 
-import com.tigergraph.v3_6_3.client.logging.GsqlClientLogger;
-import static com.tigergraph.v3_6_3.client.util.SystemUtils.logger;
+import static com.tigergraph.v3_7_0.client.util.SystemUtils.logger;
 
 public class Client {
   private static final String DEFAULT_USER = "tigergraph";
@@ -513,8 +512,7 @@ public class Client {
       if (cookies != null && cookies.size() > 0) {
         userCookie = cookies.get(0);
         logger.setSession(username, retryableHttpConn.getCurrentURI());
-        logger.info("Session has been established with cookie %s",
-            GsqlClientLogger.maskArgsInCommand(userCookie));
+        logger.info("Session has been established with cookie %s", userCookie);
       }
     } catch (ConnectException e) {
       logger.error(e);
@@ -640,7 +638,7 @@ public class Client {
         } else if (line.startsWith("__GSQL__COOKIES__")) {
           String[] words = line.split(",", 2);
           userCookie = words[1];
-          logger.info("userCookie set to: " + GsqlClientLogger.maskArgsInCommand(userCookie));
+          logger.info("userCookie set to: " + userCookie);
         } else if (line.startsWith(cursorMoveup)) {
           String[] tokens = line.split(",");
           // print a progress bar
@@ -959,11 +957,10 @@ public class Client {
 
     if (userCookie != null) {
       userCookie = userCookie + "; GSQLCookie=" + cookieJSON.toString();
-      logger.info("Generate new GSQL-Cookie: %s", GsqlClientLogger.maskArgsInCommand(userCookie));
+      logger.info("Generate new GSQL-Cookie: %s", userCookie);
       return userCookie;
     }
-    logger.info("Generate new GSQL-Cookie: %s",
-        GsqlClientLogger.maskArgsInCommand(cookieJSON.toString()));
+    logger.info("Generate new GSQL-Cookie: %s", cookieJSON.toString());
     return cookieJSON.toString();
   }
 
@@ -982,7 +979,7 @@ public class Client {
    * @return Commit hash
    */
   private String getCommitClient() {
-  if (true) return "47eaceea8a28cf7445b8d34fd65325c19ef8a24f"; String clientCommitHash = null;
+  if (true) return "9d66283fcda90d6f6d952244d28d0877736da699"; String clientCommitHash = null;
     try {
       Properties props = new Properties();
       InputStream in = Client.class.getClassLoader().getResourceAsStream("Version.prop");
